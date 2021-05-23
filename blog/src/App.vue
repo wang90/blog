@@ -1,6 +1,12 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <div>
+    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+    <h4>This  is my blog</h4>
+    <router-link to="/">home</router-link>
+    <router-link to="/wow">wow</router-link>
+    <router-view />
+  </div>
+
 </template>
 
 <script lang="ts">
