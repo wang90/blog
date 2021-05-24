@@ -1,10 +1,9 @@
 <template>
-  <div>
-    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <h4>This  is my blog</h4>
-    <router-link to="/">home</router-link>
-    <router-link to="/wow">wow</router-link>
-    <router-view />
+  <div class="content">
+    <div class="page">
+      <router-view />
+    </div>
+
   </div>
 
 </template>
@@ -16,18 +15,26 @@ import HelloWorld from './components/HelloWorld.vue'
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
   }
 })
 </script>
 
 <style>
+  *{ margin: 0;padding:0 }
+  body,html,#app ,.content{width: 100%;height:100%}
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
