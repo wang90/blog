@@ -23,6 +23,9 @@ export default defineComponent({
 <style>
   *{ margin: 0;padding:0 }
   body,html,#app ,.content{width: 100%;height:100%}
+  body{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  }
   .content {
     display: flex;
     justify-content: space-between;
