@@ -11,8 +11,8 @@
   
 <script lang="ts">
   import { ref, defineComponent } from 'vue'
-  import SvgImage from '../components/SvgImage.vue'
-  import NavbarComponent from '../components/NavBar.vue'
+  import SvgImage from '/@src/components/SvgImage.vue'
+  import NavbarComponent from '/@src/components/NavBar.vue'
   export default defineComponent({
     name: 'HomePage',
     components: {
