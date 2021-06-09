@@ -8,4 +8,18 @@ export default defineConfig({
     '/@src': path.resolve(__dirname,'/src/'),
   },
   plugins: [vue()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        includePaths: [
+          path.resolve(__dirname, '../node_modules/compass-mixins/lib')
+        ]
+      },
+      sass: {
+        includePaths: [
+          path.resolve(__dirname, '../node_modules/compass-mixins/lib')
+        ] 
+      },
+    }
+  }
 })

@@ -29,6 +29,7 @@ Object.keys(modules).forEach(key => {
   })
 })
 
+console.log(routerList)
 export default createRouter({
   history: createWebHistory(),
   routes: routerList,
