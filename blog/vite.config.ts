@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-// import path from 'path'
 import vue from '@vitejs/plugin-vue'
 const path = require("path")
 
@@ -16,6 +15,7 @@ export default defineConfig({
         ]
       },
       sass: {
+        indentedSyntax: true,
         includePaths: [
           path.resolve(__dirname, '../node_modules/compass-mixins/lib')
         ] 

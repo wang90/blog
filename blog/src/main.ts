@@ -6,7 +6,5 @@ const app = createApp(App);
 
 import './css/index.scss';
 
-
-
 app.use(router);
 app.mount('#app')

@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "compass-mixins-fixed": "^1.0.1",
+    "compass-sass-mixins": "^0.12.7",
     "normalize.css": "^8.0.1",
     "vue": "^3.0.5",
     "vue-router": "^4.0.8",

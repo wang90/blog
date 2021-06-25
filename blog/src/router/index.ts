@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-
-
 const Routers = [
   {
     'name': 'Home',
@@ -29,7 +27,6 @@ Object.keys(modules).forEach(key => {
   })
 })
 
-console.log(routerList)
 export default createRouter({
   history: createWebHistory(),
   routes: routerList,
