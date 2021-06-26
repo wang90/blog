@@ -1,21 +1,25 @@
 <template>
   <div class="content">
+   
     <div class="page">
-      <router-view />
+      <div class="view-content">
+        <router-view />
+      </div>
+      <div class="page-footer">
+        <svg-image></svg-image>
+      </div>
     </div>
-
   </div>
-
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import SvgImage from './components/SvgImage.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld,
+    SvgImage,
   }
 })
 </script>
@@ -34,6 +38,12 @@ export default defineComponent({
     width: 100%;
     height: 100%;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

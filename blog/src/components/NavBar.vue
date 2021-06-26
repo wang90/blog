@@ -14,9 +14,17 @@ export default defineComponent({
     }
 })
 </script>
-<style scoped>
+<style scoped lang="scss">
     .nav-bar-component {
-
+        display:flex;
+        div {
+            width : 200px;
+            height: 100px;
+            border-radius: 10px;
+            background:#fff;
+            margin: 0 20px;
+            cursor: pointer;
+        }
     }
 </style>
   
