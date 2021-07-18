@@ -1,7 +1,7 @@
 <template>
-    <div class="page-content">
+    <div class="page">
       <home-navbar-component></home-navbar-component>
-      Wow page
+        <div class="page-content">wow page</div>
     </div>
 </template>
   

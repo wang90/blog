@@ -1,7 +1,9 @@
 <template>
-  <div class="page-content">
+  <div class="page">
     <home-navbar-component></home-navbar-component>
-    mine
+    <div class="page-content">
+      mine
+    </div>
   </div>
 </template>
 

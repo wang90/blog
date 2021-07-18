@@ -1,6 +1,8 @@
 <template>
-    <home-navbar-component></home-navbar-component>
-    <div class="page-content">Switch page</div>
+    <div class="page">
+      <home-navbar-component></home-navbar-component>
+        <div class="page-content">switch page</div>
+    </div>
 </template>
   
   <script lang="ts">

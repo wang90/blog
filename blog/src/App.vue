@@ -2,7 +2,9 @@
   <div class="content">
     <div class="page">
       <div class="view-content">
-        <router-view />
+        <keep-alive>
+          <router-view />
+        </keep-alive>
       </div>
       <div class="page-footer">
         <svg-image></svg-image>
@@ -24,7 +26,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-*{ margin: 0;padding:0 }
+*{ margin: 0; padding: 0 }
 body,html,#app ,.content{ width: 100%;height:100% }
 body{
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -46,12 +48,22 @@ body{
 .view-content {
   flex: 1;
   padding: 40px;
-  .page-content {
-    // background: rgba(255,255,255,0.1);
-    border-radius: 10px;
+  .page {
     width: 100%;
     height:100%;
     box-sizing: border-box;
+    display:flex;
+    flex-direction: row;
+    .page-content { 
+      flex: 1;
+      height: 85%;
+      margin-left: 20px;
+      background:rgba(255,255,255,0.05);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 1px 1px rgba(255,255,255,0.05);
+      color: #fff;
+    }
   }
 
 }

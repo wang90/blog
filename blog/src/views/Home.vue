@@ -1,9 +1,12 @@
 <template>
-  <div class="home-page">
+  <div class="page home-page">
     <div class="nav-bar">
       <welcome-text class="welcome-text" 
         v-if="loading" @start="loading = false;"></welcome-text>
       <home-navbar-component v-if="!loading"></home-navbar-component>
+    </div>
+    <div class="page-content" v-if="!loading">
+      home
     </div>
   </div>
 </template>
@@ -21,7 +24,7 @@
     },
     setup: () => {
       const count = ref(0)
-      const loading = ref(true)
+      const loading = ref( true )
       return { 
           count,
           loading,

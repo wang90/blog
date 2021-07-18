@@ -17,7 +17,8 @@ Object.keys(modules).forEach( key => {
   routerList.push({
     path: `/${ name.toLowerCase() === 'home' ? '' :  name.toLowerCase() }`,
     name: `${ name.toUpperCase() }`,
-    component: modules[key]
+    component: modules[key],
+    meta: { keepAlive: true },
   })
 })
 
