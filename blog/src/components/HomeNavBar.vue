@@ -18,22 +18,11 @@ const Routers =  PageRouters.map(( v:string)  => {
     }
 }) 
 
-// const tabs = [
-//     { 
-//         type: 'mine',
-//         name: 'About me ',
-//     },
-//     {
-//         type: 'wow',
-//         name: 'Wow'
-//     }
-// ]
-
 export default defineComponent({
     name: 'HomeNavbarComponent',
     methods: {
-        toPage( type:string) {
-            this.$router.push({ name: type.toUpperCase() }).catch(err=>{
+        toPage( type: string ) {
+            this.$router.push({ name: type.toUpperCase() }).catch( err => {
                 console.log(err);
             })
         }
@@ -54,7 +43,8 @@ export default defineComponent({
             height: 30px;
             border-radius: 8px;
             background: rgba(255,255,255,0.4);
-            margin: 10px 20px;
+            // margin: 10px 20px;
+            margin-bottom: 20px;
             cursor: pointer;
             font-size: 14px;
             .icon {

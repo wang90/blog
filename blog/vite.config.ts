@@ -3,8 +3,10 @@ import vue from '@vitejs/plugin-vue'
 const path = require("path")
 
 export default defineConfig({
-  alias: {
-    '/@src': path.resolve(__dirname,'/src/'),
+  resolve: {
+    alias: {
+      '/@src': path.resolve(__dirname,'/src/'),
+    },
   },
   plugins: [vue()],
   css: {
@@ -25,5 +27,4 @@ export default defineConfig({
   server: {
     open: true,
   },
-  
 })

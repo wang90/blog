@@ -23,7 +23,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style lang="scss">
 *{ margin: 0;padding:0 }
 body,html,#app ,.content{ width: 100%;height:100% }
 body{
@@ -45,5 +45,14 @@ body{
 }
 .view-content {
   flex: 1;
+  padding: 40px;
+  .page-content {
+    // background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    width: 100%;
+    height:100%;
+    box-sizing: border-box;
+  }
+
 }
 </style>

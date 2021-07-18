@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="page-content">
+      <home-navbar-component></home-navbar-component>
       <div id="pikachu">test</div>
       <div id="ash"></div>
     </div>
@@ -7,8 +8,12 @@
   
 <script lang="ts">
   import { defineComponent } from 'vue'
+  import HomeNavbarComponent from '/@src/components/HomeNavbar.vue'
   export default defineComponent({
     name: 'Pokemon',
+    components: {
+      HomeNavbarComponent,
+    },
     setup: () => {
       
     }
