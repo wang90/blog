@@ -38,7 +38,7 @@ export default defineComponent({
     .nav-bar-component {
         display:flex;
         flex-direction: column;
-        div {
+        > div {
             width: 100px;
             height: 30px;
             border-radius: 4px;
@@ -76,7 +76,6 @@ export default defineComponent({
             }
             &:hover,
             &.active {
-                width: 100%;
                 color: #fff;
                 &::before {
                     width: 100%;
@@ -84,5 +83,14 @@ export default defineComponent({
             }
         }
     }
+
+@media (max-width: 768px){ 
+.nav-bar-component {
+    flex-direction: row;
+    > div {
+        margin-right: 5px;
+    }
+}
+}
 </style>
   

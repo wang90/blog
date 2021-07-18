@@ -36,6 +36,7 @@ body{
   justify-content: space-between;
   background-image: radial-gradient(1600px at 70% 120%, rgba(33, 39, 80, 1) 10%, #020409 100%);
   overflow: hidden;
+  min-width: 300px;
 }
 .page {
   width: 100%;
@@ -59,12 +60,22 @@ body{
       height: 85%;
       margin-left: 20px;
       background:rgba(255,255,255,0.05);
-      border-radius: 8px;
+      border-radius: 4px;
       padding: 20px;
       box-shadow: 0 0 1px 1px rgba(255,255,255,0.05);
       color: #fff;
     }
   }
-
+}
+@media (max-width: 768px){ 
+.view-content {
+  padding: 20px;
+  .page {
+    flex-direction: column;
+    .page-content { 
+      margin-left: 0;
+    }
+  }
+}
 }
 </style>

@@ -43,8 +43,10 @@
   .welcome-text {
     position: absolute;
     left: 50%;
+    left:0;
+    right: 0;
     top:50%;
-    transform: translate(-50%);
+    transform: translate(0, -50%);
     margin-top: -30px;
     max-width: 100%;
     z-index: 999;
