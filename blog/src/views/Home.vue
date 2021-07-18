@@ -1,11 +1,11 @@
 <template>
-    <div class="home-page">
-      <div class="nav-bar">
-        <welcome-text v-if="loading" @start="start"></welcome-text>
-        <navbar-component v-if="!loading"></navbar-component>
-      </div>
-     
+  <div class="home-page">
+    <div class="nav-bar">
+      <welcome-text class="welcome-text" 
+        v-if="loading" @start="loading = false;"></welcome-text>
+      <navbar-component v-if="!loading"></navbar-component>
     </div>
+  </div>
 </template>
   
 <script lang="ts">
@@ -16,7 +16,6 @@
   export default defineComponent({
     name: 'HomePage',
     components: {
-
       WelcomeText,
       NavbarComponent,
     },
@@ -29,17 +28,25 @@
       }
     },
     methods: {
-      start() {
-        console.log('start')
-        this.loading = false;
-      }
+
     }
   })
   </script>
   
-<style scoped>
-    .home-page {
+<style scoped lang="scss">
+.home-page {
+  width: 100%;
+  height: 100%;
+  .welcome-text {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%);
+    margin-top: -30px;
+    max-width: 100%;
+    z-index: 999;
+  }
+}
 
-    }
-  </style>
+</style>
   
