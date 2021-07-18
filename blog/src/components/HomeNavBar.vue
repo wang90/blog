@@ -9,31 +9,38 @@
   
 <script lang="ts">
 import { defineComponent } from 'vue'
-const tabs = [
-    { 
-        type: 'home',
-        name: 'HOME',
-    },
-    { 
-        type: 'mine',
-        name: 'About me ',
-    },
-    {
-        type: 'wow',
-        name: 'Wow'
+import { PageRouters } from '/@src/router/config';
+
+const Routers =  PageRouters.map(( v:string)  => {
+    return {
+        name: v, 
+        type: v
     }
-]
+}) 
+
+// const tabs = [
+//     { 
+//         type: 'mine',
+//         name: 'About me ',
+//     },
+//     {
+//         type: 'wow',
+//         name: 'Wow'
+//     }
+// ]
 
 export default defineComponent({
-    name: 'NavbarComponent',
+    name: 'HomeNavbarComponent',
     methods: {
         toPage( type:string) {
-            this.$router.push({ name: type.toUpperCase() })
+            this.$router.push({ name: type.toUpperCase() }).catch(err=>{
+                console.log(err);
+            })
         }
     },
     data() {
         return {
-            tabs,
+            tabs: Routers,
         }
     }
 })

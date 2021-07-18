@@ -10,8 +10,12 @@ Object.keys(modules).forEach( key => {
   const indexMatch = nameMatch[1].match(/(.*)\/Index$/i)
   const name = indexMatch ? indexMatch[1] : nameMatch[1];
 
+
+  if ( name.toLowerCase() === 'home' ) {
+
+  }
   routerList.push({
-    path: `/${ name.toLowerCase() === 'home' ? '/' :  name.toLowerCase() }`,
+    path: `/${ name.toLowerCase() === 'home' ? '' :  name.toLowerCase() }`,
     name: `${ name.toUpperCase() }`,
     component: modules[key]
   })
